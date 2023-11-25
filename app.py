@@ -1,5 +1,6 @@
 from flask import Flask, render_template, Response
 import cv2
+import time
 import atexit
 import motor.motor as motor
 import aruco.detect_aruco as detect
@@ -66,6 +67,7 @@ def stop():
 
 @app.route("/auto",methods=['GET'])
 def auto():
+    time.sleep(0.5)
     _, image = cap.read()
     reach.reach_aruco(image)
     return render_template('auto.html')

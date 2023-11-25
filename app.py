@@ -7,7 +7,8 @@ import aruco.detect_aruco as aruco
 app = Flask(__name__)
 Motor = motor.MotorDriver()
 cap = cv2.VideoCapture(0) 
-
+cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1280)
+cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 720)
 
 @app.route('/')
 def index():

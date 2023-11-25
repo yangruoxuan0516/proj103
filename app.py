@@ -67,7 +67,6 @@ def stop():
 
 @app.route("/auto",methods=['GET'])
 def auto():
-    time.sleep(0.5)
     _, image = cap.read()
     reach.reach_aruco(image)
     return render_template('auto.html')

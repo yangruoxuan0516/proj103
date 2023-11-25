@@ -17,23 +17,23 @@ def manual():
 
 def turn_left_a_little():
     motor.left(Motor,45)
-    time.sleep(0.5)
+    time.sleep(0.2)
     motor.stop(Motor)
     time.sleep(0.5)
 
 def turn_right_a_little():
     motor.right(Motor,45)
-    time.sleep(0.5)
+    time.sleep(0.2)
     motor.stop(Motor)
     time.sleep(0.5)
 
 def go_forward_a_little():
      motor.forward(Motor,45)
-     time.sleep(0.5)
+     time.sleep(0.2)
      motor.stop(Motor)
      time.sleep(0.5)
 
-def reach_aruco(direction,distance):
+def reach_aruco(direction,distance,found,left):
     if direction:
         found = True            
         if direction == 1:
@@ -56,8 +56,6 @@ def reach_aruco(direction,distance):
 
 
 def video_result():
-    found = False
-    left = True # need to turn left
     while True:
         success, frame = cap.read()
         if not success:
@@ -81,9 +79,10 @@ def video_result_auto():
             break
         else:
             frame,direction,distance = detect.detect_aruco(frame)
-            if distance <= 25:
-                break
-            reach_aruco(direction,distance)
+            if distance:
+                if distance <= 25:
+                    break
+            reach_aruco(direction,distance,found,left)
             _, buffer = cv2.imencode('.jpg', frame)
             frame = buffer.tobytes()
             # This step is necessary because the Flask Response object expects

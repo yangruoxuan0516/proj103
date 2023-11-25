@@ -1,4 +1,4 @@
-h1 {
+.h1 {
     color: #3c3c3c; 
     display: flex;
     justify-content: center;
@@ -11,13 +11,13 @@ h1 {
     width: 70%;
 }
 
-div {
+.div {
     color: #3c3c3c; 
     display: flex;
     justify-content: center;
 }
 
-href {
+.href {
     color: #3c3c3c; 
     display: flex;
     justify-content: center;

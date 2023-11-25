@@ -51,14 +51,17 @@ def detect_aruco(image):
 			# left / right
 			_,width,_ = image.shape
 			if cX < width*0.4:
+				direction = 1
 				cv2.putText(image, "It is a little bit to my left",(15,65), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2)
 			elif cX > width*0.6:
+				direction = 3
 				cv2.putText(image, "It is a little bit to my right",(15,65), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2)
 			else:
+				direction = 2	
 				cv2.putText(image, "It is right in front of me",(15,65), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2)
 			# show the output image
-			return image
-	return image
+			return image,direction,distance
+	return image,0,None
 
 
 # -- test using picture -- #

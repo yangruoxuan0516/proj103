@@ -1,4 +1,4 @@
-from PCA9685 import PCA9685
+from motor.PCA9685 import PCA9685
 
 Dir = [
     'forward',

@@ -79,6 +79,9 @@ https://doc.telecom-paris.fr/reseau/param.html#parametres-de-configuration
 - personal hotspot  
   > ssh g7a@g7a.local 
 
+- home
+  > ssh robotpi-34@192.168.1.90
+
 - campus wifi  
   > ssh robotpi-34@robotpi-34.enst.fr
 - password: g7a

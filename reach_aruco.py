@@ -66,16 +66,16 @@ def detect_aruco(image):
     return [0,None]
     
 def turn_left_a_little():
-    motor.left(Motor,40)
-    time.sleep(0.2)
+    motor.left(Motor,30)
+    time.sleep(0.1)
 
 def turn_right_a_little():
-    motor.right(Motor,40)
-    time.sleep(0.2)
+    motor.right(Motor,30)
+    time.sleep(0.1)
 
 def go_forward_a_little():
-     motor.forward(Motor,40)
-     time.sleep(0.2)
+     motor.forward(Motor,30)
+     time.sleep(0.1)
 
 
     

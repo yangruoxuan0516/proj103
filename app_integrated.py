@@ -16,22 +16,22 @@ def manual():
     return render_template('manual.html')
 
 def turn_left_a_little():
-    motor.left(Motor,45)
+    motor.left(Motor,40)
     time.sleep(0.2)
     motor.stop(Motor)
-    time.sleep(0.5)
+    time.sleep(1)
 
 def turn_right_a_little():
-    motor.right(Motor,45)
+    motor.right(Motor,40)
     time.sleep(0.2)
     motor.stop(Motor)
-    time.sleep(0.5)
+    time.sleep(1)
 
 def go_forward_a_little():
-     motor.forward(Motor,45)
+     motor.forward(Motor,40)
      time.sleep(0.2)
      motor.stop(Motor)
-     time.sleep(0.5)
+     time.sleep(1)
 
 def reach_aruco(direction,distance,found,left):
     if direction:

@@ -19,19 +19,19 @@ def turn_left_a_little():
     motor.left(Motor,40)
     time.sleep(0.2)
     motor.stop(Motor)
-    time.sleep(1)
+    time.sleep(3)
 
 def turn_right_a_little():
     motor.right(Motor,40)
     time.sleep(0.2)
     motor.stop(Motor)
-    time.sleep(1)
+    time.sleep(3)
 
 def go_forward_a_little():
      motor.forward(Motor,40)
      time.sleep(0.2)
      motor.stop(Motor)
-     time.sleep(1)
+     time.sleep(3)
 
 def reach_aruco(direction,distance,found,left):
     if direction:

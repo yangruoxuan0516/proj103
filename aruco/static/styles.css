@@ -1,0 +1,22 @@
+h1 {
+    color: #3c3c3c; 
+    display: flex;
+    justify-content: center;
+}
+
+p {
+    color: #3c3c3c; 
+    position: absolute;
+    top: 80%;
+    left: 15%;
+    width: 70%;
+}
+
+.video {
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    width: 70%;
+}
+
+

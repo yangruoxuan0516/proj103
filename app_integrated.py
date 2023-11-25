@@ -127,7 +127,7 @@ def stop():
     going = "stopped"
     return render_template('manual.html', going=going)
 
-@app.route("/auto")
+@app.route("/video_auto")
 def video_auto():
     return Response(video_result_auto(), mimetype='multipart/x-mixed-replace; boundary=frame')
 

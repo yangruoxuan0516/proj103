@@ -68,8 +68,8 @@ def video_result():
             frame = buffer.tobytes()
             # This step is necessary because the Flask Response object expects
             # a byte-like object for streaming.
-            yield (b'--frame\r\n'
-                   b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
+            with app.app_context():
+                yield (b'--frame\r\n' b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
             
 
 def video_result_auto():
@@ -88,8 +88,8 @@ def video_result_auto():
             frame = buffer.tobytes()
             # This step is necessary because the Flask Response object expects
             # a byte-like object for streaming.
-            yield (b'--frame\r\n'
-                   b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
+            with app.app_context():
+                yield (b'--frame\r\n' b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
 
 
             

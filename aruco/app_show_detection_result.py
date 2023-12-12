@@ -16,7 +16,7 @@ def video_result():
         if not success:
             break
         else:
-            frame = detect_aruco.detect_aruco(frame)
+            frame,_,_ = detect_aruco.detect_aruco(frame)
             _, buffer = cv2.imencode('.jpg', frame)
             frame = buffer.tobytes()
             # This step is necessary because the Flask Response object expects
